@@ -1,0 +1,25 @@
+<div id="productContainer">
+    <h1>Product</h1>
+	<div id="prodImage">
+     	<img ng-src="img/{{product.image}}"/>
+ 	</div>    
+	<div id="prodName">
+     	{{product.name}}
+ 	</div>    
+	<div id="prodCategory">
+     	{{product.category}}
+ 	</div>   
+	<div id="prodPrice">
+     	{{product.price}}
+ 	</div>    
+ 	<div>
+         <form ng-submit="addProdToCart(product)">
+            <input type="number" ng-model="quantity" min="0">
+            <button type="submit">Add to cart</button> 
+        </form>
+    </div>     
+    <div>
+            <button ng-click= "backToProducts()">Back to products</button> 
+    </div>           
+</div><!--productContainer-->
+<cartsection></cartsection>

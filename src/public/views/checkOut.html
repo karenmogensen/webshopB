@@ -1,0 +1,47 @@
+ 	<div id='contactContainer'>
+ 		<h1>Customer</h1>
+         <form ng-submit="checkOut()">
+         	<div id = "Navn">
+         		<label>Name:</label><br>
+            	<input type="text" ng-model="customer.name" placeholder="First Name">
+            </div>
+         	<div id = "address">
+         		<label>Address:</label><br>
+            	<input type="text" ng-model="customer.address" placeholder="Address">
+            </div>
+         	<div id = "zip">
+         		<label>Zip:</label><br>
+            	<input type="text" ng-model="customer.zip" placeholder="Zip">
+            </div>
+         	<div id = "city">
+         		<label>City:</label><br>
+            	<input type="text" ng-model="customer.city" placeholder="City">
+            </div>
+         	<div id = "phone">
+         		<label>Phone:</label><br>
+            	<input type="text" ng-model="customer.phone" placeholder="Phone">
+            </div>
+         	<div id = "mail">
+         		<label>Mail:</label><br>
+            	<input type="text" ng-model="customer.mail" placeholder="Mail">
+            </div>            
+            <button type="submit" ng-click="saveOrder()">Order</button> 
+        </form>
+    </div><!--contactContainer-->     
+   <div id="orderContainer">
+    <h1>Order</h1>
+    <div id="cartSection" ng-show="showCartSection()">
+        <table id="cartTable"class="table table-bordered table-stribed">
+         <tr><th>Product</th><th>Quantity</th><th>Price</th><th>Total</th></tr>
+         <tr ng-repeat="cartProduct in cartProducts">
+            <td>{{cartProduct.name}}</td>
+            <td>{{cartProduct.quantity}}</td>
+                <td>{{cartProduct.price | currency}}</td>
+                <td>{{cartProduct.price * cartProduct. quantity | currency}}</td>
+         </tr>
+        </table>
+        <table id="cartTableTotal" class="table table-bordered table-stribed">
+            <tr><td>Sum</td><td>{{ cartTotal | currency }}<td></tr>            
+        </table>
+    </div><!--orderContainer-->
+   </div> 

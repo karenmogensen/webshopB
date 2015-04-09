@@ -1,0 +1,13 @@
+<div>
+<h1>Create or update product</h1>
+<form>
+	<label >Product name: </label><input type='text' ng-model='product.name'></br>
+	<label>Product price: </label><input type='text' ng-model='product.price'></br>
+	<label>Product image: </label><input type='text' ng-model='product.image'></br>
+	<label>Product category: </label><select name='Category' id='catDropDown' ng-model='product.category' 
+	ng-options='category.category for category in categories'>
+		<option value="">Select a category</option>
+	</select></br>
+	<button type='submit' ng-click='saveProduct()' >Save</button>
+</form>
+</div>

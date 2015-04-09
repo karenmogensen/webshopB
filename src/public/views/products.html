@@ -1,0 +1,39 @@
+<div id="productContainer">
+    <div>
+        <button ng-click= "adminProducts()">Administrer produkter</button> 
+        <button ng-click= "adminOrders()">Administrer ordrer</button> 
+    </div>
+    <h1>Products</h1>
+    <div id="searchSection">
+        <div id="categorySearchSection">
+	        <ul id="categoryList" class="list-group">
+	            <li class="categoryListItem" ng-repeat = "category in categories">
+	                <input type="checkbox" ng-click="categoryChanged(category.category)">{{ category.category }}</input>
+	            </li>
+	        </ul>        	
+        </div><!--categorySearchSection-->
+        <div id="productSearchSection">
+    		<input type="search" placeholder="Search product name" ng-model="products.name">
+        </div><!--productSearchSection-->
+    </div><!--searchSection-->
+    <div id="productsSection">
+        <table id="productsTable" class="table table-bordered table-striped">
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th></th>
+            <tr ng-repeat="product in products | filter:products.name | filter:categoryFilter">
+                <td><img ng-src="img/{{product.image}}"/></td>
+                <td><a ng-href="index.html#/product/{{product.productId}}">{{ product.name }}</a></td>
+                <td>{{ product.price }}</td>
+                <td>
+                    <form ng-submit="addProdToCart(product)">
+                        <input type="number" ng-model="quantity" min="0" placeholder="0">
+                        <button type="submit">Add to cart</button> 
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div><!--productsSection-->
+</div><!--productContainer-->
+<cartsection></cartsection>

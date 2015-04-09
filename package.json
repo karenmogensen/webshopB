@@ -1,0 +1,35 @@
+{
+  "name": "webshopB",
+  "version": "1.0.0",
+  "description": "Webshop for mandatory assignment B - Frameworks spring 2015",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karenmogensen/webshopB"
+  },
+  "author": "Karen Mogensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karenmogensen/webshopB/issues"
+  },
+  "homepage": "https://github.com/karenmogensen/webshopB",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "express": "^4.12.3",
+    "mongoose": "^4.0.1",
+    "mongoose-auto-increment": "^4.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.5.3",
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.1.0",
+    "jshint-stylish": "^1.0.1",
+    "nodemon": "^1.3.7"
+  }
+}

@@ -1,0 +1,56 @@
+#mainContent
+{
+	float: left;
+	width: 90%;
+}
+
+#contactContainer
+{
+	float: left; 
+	width: 60%;
+	padding-left: 20px;
+}
+#orderContainer
+{
+	float: left; 
+	width: 60%;
+	padding-left: 20px;
+} 
+
+#productContainer
+{
+	float: left; 
+	width: 60%;
+	padding-left: 20px;
+} 
+
+#searchSection
+{
+	float: left;
+	width: 100%;
+}
+#categorySearchSection
+{
+	float: left;
+	width: 50%;
+}
+#productSearchSection
+{
+	float: right;
+	width: 50%;
+}
+#productsSection
+{
+	float: left;
+	width: 100%;
+}
+#categoryList
+{
+	float: left;
+	list-style-type: none;
+}
+#cartContainter
+{
+	width: 30%;
+	float:right;
+}

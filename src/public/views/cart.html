@@ -1,0 +1,19 @@
+<div id="cartContainter" ng-controller="cartController" ng-show="showCartSection()">
+    <h1>Cart</h1>
+    <div id="cartSection">
+        <table id="cartTable"class="table table-bordered table-stribed">
+        	<tr><th>Product</th><th>Quantity</th><th>Price</th><th>Total</th></tr>
+        	<tr ng-repeat="cartProduct in cartProducts">
+        		<td>{{cartProduct.name}}</td>
+        		<td>{{cartProduct.quantity}}</td>
+                <td>{{cartProduct.price | currency}}</td>
+                <td>{{cartProduct.price * cartProduct. quantity | currency}}</td>
+        		<td><button ng-click="removeProductFromCart($index)">Remove</button></td>
+        	</tr>
+        </table>
+        <table id="cartTableTotal" class="table table-bordered table-stribed">
+            <tr><td>Sum</td><td>{{ cartTotal | currency }}<td></tr>            
+        </table>
+        <button ng-click="checkOut()">Order</button>
+    </div><!--cartSection-->
+</div><!--cartContainer-->
